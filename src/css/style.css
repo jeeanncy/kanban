@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  box-sizing: border-box;
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.checkbox {
+  display: none;
+}
+
+.checkbox:checked ~ .switch::after {
+  transform: translateX(15px);
+  background: white;
+}
+
+.checkbox:checked ~ .switch {
+  background-color: rgb(168 85 247 / 500);
+}
+
+.switch {
+  height: 25px;
+  width: 40px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.switch::after {
+  display: block;
+  content: "";
+  border-radius: 50%;
+  margin: 5px;
+  height: 15px;
+  width: 15px;
+  transform: translateX(0);
+  transition: 0.3s;
+  will-change: transform;
+}

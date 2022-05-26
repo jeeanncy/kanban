@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.b0cb4e98.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kanban</title>
+  <script type="module" crossorigin src="/assets/index.0bfed2a0.js"></script>
+  <link rel="stylesheet" href="/assets/index.032f390c.css">
+</head>
+
+<body
+  class="bg-[#EEF2F5] dark:bg-[#191B2B] dark:text-white flex gap-3 h-screen w-screen px-5 pt-6 pb-2 justify-center ">
+  <!-- Left Bar -->
+  <div class="overflow-y-auto h min-w-fit pr-5 mb-4">
+    <div class="bg-white dark:bg-[#282A43] min-h-full py-6 px-5 rounded-[2.4rem] flex flex-col items-center gap-9 ">
+      <div
+        class="w-12 h-12 flex items-center flex-shrink-0 justify-center bg-sky-500 dark:bg-purple-500 text-white rounded-full text-xl">
+        <span>K</span>
+      </div>
+      <div class=" mt-6 flex-1 flex flex-col items-center gap-12 text-lg ">
+        <div class="w-12 h-12 flex items-center justify-center bg-blue-900 text-white rounded-full">
+          <i class="fa-solid fa-grip"></i>
+        </div>
+        <i class="fa-solid fa-chart-column text-gray-400/95 "></i>
+        <i class=" fa-regular fa-envelope text-gray-400/95 "></i>
+        <i class="fa-solid fa-calendar-days text-gray-400/95 "></i>
+        <i class="fa-solid fa-gear text-gray-400/95 "></i>
+      </div>
+      <img class="w-11 h-11 object-cover rounded-full" src="/assets/user.a60aae5a.png" alt="">
+      <div>
+        <input type="checkbox" id="checkbox" class="checkbox">
+        <label for="checkbox" class="switch bg-gray-400/95 after:bg-white"></label>
+      </div>
+      <i class="fa-solid fa-arrow-right-from-bracket text-gray-400/95 text-lg "></i>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="pt-7 md:pr-5 gap-5 flex flex-col overflow-hidden">
+
+    <!-- Title -->
+    <h1 class="text-3xl font-bold">Tablas</h1>
+
+    <!-- Bar -->
+    <div class="flex flex-wrap gap-4 justify-between">
+      <!-- Selector -->
+      <div class="font-bold bg-white dark:bg-[#282A43] py-3 px-5 rounded-full flex items-center gap-3">
+        <span>Michilala Store</span>
+        <i class="fa-solid fa-angle-down text-[10px]"></i>
+      </div>
+      <div class="flex flex-row flex-wrap gap-4">
+        <!-- Search -->
+        <div
+          class="bg-white dark:bg-[#282A43] py-3 px-5 rounded-full flex items-center gap-2 w-32 md:w-56 transition-all	">
+          <i class="fa-solid fa-magnifying-glass text-sm "></i>
+          <input class="outline-none w-full bg-transparent" type="text" placeholder="Buscar">
+        </div>
+        <!-- Team -->
+        <div class="flex flex-row -space-x-3">
+          <img class="w-11 h-11 object-cover border-2 border-[#EEF2F5] dark:border-[#191B2B] rounded-full"
+            src="/assets/user.a60aae5a.png" alt="user">
+          <img class="w-11 h-11 object-cover border-2 border-[#EEF2F5] dark:border-[#191B2B] rounded-full"
+            src="/assets/user4.a674d729.png" alt="user">
+          <img class="w-11 h-11 object-cover border-2 border-[#EEF2F5] dark:border-[#191B2B] rounded-full"
+            src="/assets/user3.ad72fbbb.png" alt="user">
+          <div
+            class="w-11 h-11 border-2 border-[#EEF2F5] dark:border-[#191B2B] bg-blue-900 flex items-center justify-center text-white rounded-full text-xs font-semibold">
+            +1
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- Sections -->
+    <div class="flex-1 flex flex-row gap-1 overflow-x-auto overflow-y-hidden pb-4">
+      <!-- To do -->
+      <div class="flex flex-col gap-4">
+        <!-- Title -->
+        <div class="flex items-center gap-3">
+          <div class="bg-[#FF2373] w-4 h-4 rounded"></div>
+          <span class="font-bold">Por hacer</span>
+          <i class="fa-solid fa-plus text-gray-400/95"></i>
+        </div>
+        <!-- Cards -->
+        <div class="flex-1 space-y-5 overflow-x-hidden overflow-y-auto pr-4">
+          <!-- Card -->
+          <div class="bg-white dark:bg-[#282A43] w-60 p-4 space-y-3 rounded-2xl">
+            <!-- Card img -->
+            <img class="w-full h-24 object-cover rounded-2xl" src="/assets/bg3.63c787ed.jpg" alt="">
+            <!-- Content -->
+            <div class="flex gap-1.5">
+              <div class="flex-1 space-y-1.5">
+                <span class="font-bold block">Hacer un nuevo post</span>
+                <span class="text-xs line-clamp-3 text-gray-400/95">Lorem ipsum dolor, sit amet consectetur
+                  adipisicing elit. Quibusdam
+                  soluta
+                  quidem fugit
+                  aspernatur, tempora veniam molestias quas optio perspiciatis neque eius adipisci rem. Aliquam
+                  suscipit illum, eos ex ipsam quaerat.</span>
+              </div>
+              <i class="fa-solid fa-ellipsis-vertical text-gray-400/95 text-xl"></i>
+            </div>
+            <!-- Details -->
+            <div class="flex justify-between items-center">
+              <!-- Date -->
+              <div class="text-gray-400/95 text-[0.8rem] space-x-1">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>28/07/22</span>
+              </div>
+              <!-- Menbers -->
+              <div class="flex flex-row items-center -space-x-2">
+                <img class="w-6 h-6 object-cover border-2 border-white dark:border-[#282A43] rounded-full"
+                  src="/assets/user4.a674d729.png" alt="user">
+                <img class="w-6 h-6 object-cover border-2 border-white dark:border-[#282A43] rounded-full"
+                  src="/assets/user3.ad72fbbb.png" alt="user">
+                <div
+                  class="w-5 h-5 bg-sky-100 dark:bg-purple-300 flex items-center justify-center rounded-full text-[7px] font-semibold text-black">
+                  +1
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card -->
+          <div class="bg-white dark:bg-[#282A43] w-60 p-4 space-y-3 rounded-2xl">
+            <!-- Content -->
+            <div class="flex gap-1.5">
+              <div class="flex-1 space-y-1.5">
+                <span class="font-bold block">Hacer el prototipado de la página</span>
+                <span class="text-xs line-clamp-3 text-gray-400/95">Lorem ipsum dolor, sit amet consectetur
+                  adipisicing elit. Quibusdam
+                  soluta
+                  quidem fugit
+                  aspernatur, tempora veniam molestias quas optio perspiciatis neque eius adipisci rem. Aliquam
+                  suscipit illum, eos ex ipsam quaerat.</span>
+              </div>
+              <i class="fa-solid fa-ellipsis-vertical text-gray-400/95 text-xl"></i>
+            </div>
+            <!-- Details -->
+            <div class="flex justify-between items-center">
+              <!-- Date -->
+              <div class="text-gray-400/95 text-[0.8rem] space-x-1">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>10/07/22</span>
+              </div>
+              <!-- Menbers -->
+              <div class="flex flex-row items-center -space-x-2">
+                <img class="w-6 h-6 object-cover border-2 border-white dark:border-[#282A43]  rounded-full"
+                  src="/assets/user2.7f355a6c.png" alt="user">
+                <img class="w-6 h-6 object-cover border-2 border-white dark:border-[#282A43]  rounded-full"
+                  src="/assets/user.a60aae5a.png" alt="user">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Doing -->
+      <div class="flex flex-col gap-4">
+        <!-- Title -->
+        <div class="flex items-center gap-3">
+          <div class="bg-[#FFA943] w-4 h-4 rounded"></div>
+          <span class="font-bold">En proceso</span>
+          <i class="fa-solid fa-plus text-gray-400/95"></i>
+        </div>
+        <!-- Cards -->
+        <div class="flex-1 space-y-5 overflow-x-hidden overflow-y-auto pr-4">
+          <!-- Card -->
+          <div class="bg-white dark:bg-[#282A43] w-60 p-4 space-y-3 rounded-2xl">
+            <!-- Card img -->
+            <img class="w-full h-24 object-cover rounded-2xl" src="/assets/bg2.5bc1b44c.jpg" alt="">
+            <!-- Content -->
+            <div class="flex gap-1.5">
+              <div class="flex-1 space-y-1.5">
+                <span class="font-bold block">Verificar materiales de diseño</span>
+                <span class="text-xs line-clamp-3 text-gray-400/95">Lorem ipsum dolor, sit amet consectetur
+                  adipisicing elit. Quibusdam
+                  soluta
+                  quidem fugit
+                  aspernatur, tempora veniam molestias quas optio perspiciatis neque eius adipisci rem. Aliquam
+                  suscipit illum, eos ex ipsam quaerat.</span>
+              </div>
+              <i class="fa-solid fa-ellipsis-vertical text-gray-400/95 text-xl"></i>
+            </div>
+            <!-- Details -->
+            <div class="flex justify-between items-center">
+              <!-- Date -->
+              <div class="text-gray-400/95 text-[0.8rem] space-x-1">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>05/07/22</span>
+              </div>
+              <!-- Menbers -->
+              <div class="flex flex-row items-center -space-x-2">
+                <img class="w-6 h-6 object-cover border-2 border-white dark:border-[#282A43]  rounded-full"
+                  src="/assets/user4.a674d729.png" alt="user">
+                <img class="w-6 h-6 object-cover border-2 border-white dark:border-[#282A43]  rounded-full"
+                  src="/assets/user.a60aae5a.png" alt="user">
+                <div
+                  class="w-5 h-5 bg-sky-100 dark:bg-purple-300 flex items-center justify-center rounded-full text-[7px] font-semibold text-black">
+                  +1
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- Under review -->
+      <div class="flex flex-col gap-4">
+        <!-- Title -->
+        <div class="flex items-center gap-3">
+          <div class="bg-[#1CAEFF] w-4 h-4 rounded"></div>
+          <span class="font-bold">Bajo revisión</span>
+          <i class="fa-solid fa-plus text-gray-400/95"></i>
+        </div>
+        <!-- Cards -->
+        <div class="flex-1 space-y-5 overflow-x-hidden overflow-y-auto pr-4">
+          <!-- Card -->
+          <div class="bg-white dark:bg-[#282A43] w-60 p-4 space-y-3 rounded-2xl">
+            <!-- Content -->
+            <div class="flex gap-1.5">
+              <div class="flex-1 space-y-1.5">
+                <span class="font-bold block">Discutir presupuesto anual</span>
+                <span class="text-xs line-clamp-3 text-gray-400/95">Lorem ipsum dolor, sit amet consectetur
+                  adipisicing elit. Quibusdam
+                  soluta
+                  quidem fugit
+                  aspernatur, tempora veniam molestias quas optio perspiciatis neque eius adipisci rem. Aliquam
+                  suscipit illum, eos ex ipsam quaerat.</span>
+              </div>
+              <i class="fa-solid fa-ellipsis-vertical text-gray-400/95 text-xl"></i>
+            </div>
+            <!-- Details -->
+            <div class="flex justify-between items-center">
+              <!-- Date -->
+              <div class="text-gray-400/95 text-[0.8rem] space-x-1">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>19/06/22</span>
+              </div>
+              <!-- Menbers -->
+              <div class="flex flex-row items-center -space-x-2">
+                <img class="w-6 h-6 object-cover border-2 border-white dark:border-[#282A43]  rounded-full"
+                  src="/assets/user3.ad72fbbb.png" alt="user">
+                <img class="w-6 h-6 object-cover border-2 border-white dark:border-[#282A43]  rounded-full"
+                  src="/assets/user2.7f355a6c.png" alt="user">
+                <div
+                  class="w-5 h-5 bg-sky-100 dark:bg-purple-300 flex items-center justify-center rounded-full text-[7px] font-semibold text-black">
+                  +2
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card -->
+          <div class="bg-white dark:bg-[#282A43] w-60 p-4 space-y-3 rounded-2xl">
+            <!-- Card img -->
+            <img class="w-full h-24 object-cover rounded-2xl" src="/assets/bg1.64f63ffc.jpeg" alt="">
+            <!-- Content -->
+            <div class="flex gap-1.5">
+              <div class="flex-1 space-y-1.5">
+                <span class="font-bold block">Plan de contenido</span>
+                <span class="text-xs line-clamp-3 text-gray-400/95">Lorem ipsum dolor, sit amet consectetur
+                  adipisicing elit. Quibusdam
+                  soluta
+                  quidem fugit
+                  aspernatur, tempora veniam molestias quas optio perspiciatis neque eius adipisci rem. Aliquam
+                  suscipit illum, eos ex ipsam quaerat.</span>
+              </div>
+              <i class="fa-solid fa-ellipsis-vertical text-gray-400/95 text-xl"></i>
+            </div>
+            <!-- Details -->
+            <div class="flex justify-between items-center">
+              <!-- Date -->
+              <div class="text-gray-400/95 text-[0.8rem] space-x-1">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>24/06/22</span>
+              </div>
+              <!-- Menbers -->
+              <div class="flex flex-row items-center -space-x-2">
+                <img class="w-6 h-6 object-cover border-2 border-white dark:border-[#282A43]  rounded-full"
+                  src="/assets/user4.a674d729.png" alt="user">
+                <img class="w-6 h-6 object-cover border-2 border-white dark:border-[#282A43]  rounded-full"
+                  src="/assets/user.a60aae5a.png" alt="user">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Done -->
+      <div class="flex flex-col gap-4">
+        <!-- Title -->
+        <div class="flex items-center gap-3">
+          <div class="bg-[#40A736] w-4 h-4 rounded"></div>
+          <span class="font-bold">Finalizado</span>
+          <i class="fa-solid fa-plus text-gray-400/95"></i>
+        </div>
+
+        <!-- Cards -->
+        <div class="flex-1 space-y-5 overflow-x-hidden overflow-y-auto pr-4">
+          <!-- Card -->
+          <div class="bg-white dark:bg-[#282A43] w-60 p-4 space-y-3 rounded-2xl">
+            <!-- Content -->
+            <div class="flex gap-1.5">
+              <div class="flex-1 space-y-1.5">
+                <span class="font-bold block">Programar reunión semanal</span>
+                <span class="text-xs line-clamp-3 text-gray-400/95">Lorem ipsum dolor, sit amet consectetur
+                  adipisicing elit. Quibusdam
+                  soluta
+                  quidem fugit
+                  aspernatur, tempora veniam molestias quas optio perspiciatis neque eius adipisci rem. Aliquam
+                  suscipit illum, eos ex ipsam quaerat.</span>
+              </div>
+              <i class="fa-solid fa-ellipsis-vertical text-gray-400/95 text-xl"></i>
+            </div>
+            <!-- Details -->
+            <div class="flex justify-between items-center">
+              <!-- Date -->
+              <div class="text-gray-400/95 text-[0.8rem] space-x-1">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>10/07/22</span>
+              </div>
+              <!-- Menbers -->
+              <div class="flex flex-row items-center -space-x-2">
+                <img class="w-6 h-6 object-cover border-2 border-white dark:border-[#282A43]  rounded-full"
+                  src="/assets/user2.7f355a6c.png" alt="user">
+                <img class="w-6 h-6 object-cover border-2 border-white dark:border-[#282A43]  rounded-full"
+                  src="/assets/user.a60aae5a.png" alt="user">
+
+              </div>
+            </div>
+          </div>
+          <!-- Card -->
+          <div class="bg-white dark:bg-[#282A43] w-60 p-4 space-y-3 rounded-2xl">
+            <!-- Content -->
+            <div class="flex gap-1.5">
+              <div class="flex-1 space-y-1.5">
+                <span class="font-bold block">Discutir un nuevo concepto</span>
+                <span class="text-xs line-clamp-3 text-gray-400/95">Lorem ipsum dolor, sit amet consectetur
+                  adipisicing elit. Quibusdam
+                  soluta
+                  quidem fugit
+                  aspernatur, tempora veniam molestias quas optio perspiciatis neque eius adipisci rem. Aliquam
+                  suscipit illum, eos ex ipsam quaerat.</span>
+              </div>
+              <i class="fa-solid fa-ellipsis-vertical text-gray-400/95 text-xl"></i>
+            </div>
+            <!-- Details -->
+            <div class="flex justify-between items-center">
+              <!-- Date -->
+              <div class="text-gray-400/95 text-[0.8rem] space-x-1">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>12/06/22</span>
+              </div>
+              <!-- Menbers -->
+              <div class="flex flex-row items-center -space-x-2">
+                <img class="w-6 h-6 object-cover border-2 border-white dark:border-[#282A43]  rounded-full"
+                  src="/assets/user3.ad72fbbb.png" alt="user">
+                <img class="w-6 h-6 object-cover border-2 border-white dark:border-[#282A43]  rounded-full"
+                  src="/assets/user4.a674d729.png" alt="user">
+
+              </div>
+            </div>
+          </div>
+          <!-- Card -->
+          <div class="bg-white dark:bg-[#282A43] w-60 p-4 space-y-3 rounded-2xl">
+            <!-- Content -->
+            <div class="flex gap-1.5">
+              <div class="flex-1 space-y-1.5">
+                <span class="font-bold block">Discutir presupuesto mensual</span>
+                <span class="text-xs line-clamp-3 text-gray-400/95">Lorem ipsum dolor, sit amet consectetur
+                  adipisicing elit. Quibusdam
+                  soluta
+                  quidem fugit
+                  aspernatur, tempora veniam molestias quas optio perspiciatis neque eius adipisci rem. Aliquam
+                  suscipit illum, eos ex ipsam quaerat.</span>
+              </div>
+              <i class="fa-solid fa-ellipsis-vertical text-gray-400/95 text-xl"></i>
+            </div>
+            <!-- Details -->
+            <div class="flex justify-between items-center">
+              <!-- Date -->
+              <div class="text-gray-400/95 text-[0.8rem] space-x-1">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>22/06/22</span>
+              </div>
+              <!-- Menbers -->
+              <div class="flex flex-row items-center -space-x-2">
+                <img class="w-6 h-6 object-cover border-2 border-white dark:border-[#282A43]  rounded-full"
+                  src="/assets/user.a60aae5a.png" alt="user">
+                <img class="w-6 h-6 object-cover border-2 border-white dark:border-[#282A43]  rounded-full"
+                  src="/assets/user3.ad72fbbb.png" alt="user">
+                <div
+                  class="w-5 h-5 bg-sky-100 dark:bg-purple-300 flex items-center justify-center rounded-full text-[7px] font-semibold text-black">
+                  +2
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  
+  <script src="https://kit.fontawesome.com/8623e989f7.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

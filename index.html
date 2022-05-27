@@ -10,8 +10,8 @@
     rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kanban</title>
-  <script type="module" crossorigin src="/kanban/assets/index.0bfed2a0.js"></script>
-  <link rel="stylesheet" href="/kanban/assets/index.67131921.css">
+  <script type="module" crossorigin src="/kanban/assets/index.a71e091d.js"></script>
+  <link rel="stylesheet" href="/kanban/assets/index.cbaea0d8.css">
 </head>
 
 <body
@@ -41,7 +41,6 @@
       <i class="fa-solid fa-arrow-right-from-bracket text-gray-400/95 text-lg "></i>
     </div>
   </div>
-
   <!-- Content -->
   <div class="pt-7 md:pr-5 gap-5 flex flex-col overflow-hidden">
     <!-- Title -->
@@ -86,9 +85,9 @@
           <i class="fa-solid fa-plus text-gray-400/95"></i>
         </div>
         <!-- Cards -->
-        <div class="flex-1 space-y-5 overflow-x-hidden overflow-y-auto pr-4">
+        <div id="to-do-cards" class="flex-1 space-y-5 w-60 overflow-x-hidden overflow-y-auto pr-4">
           <!-- Card -->
-          <div class="bg-white dark:bg-[#282A43] w-60 p-4 space-y-3 rounded-2xl">
+          <div class="bg-white dark:bg-[#282A43] hover:opacity-70 p-4 space-y-3 rounded-2xl cursor-pointer drag-card">
             <!-- Card img -->
             <img class="w-full h-24 object-cover rounded-2xl" src="/kanban/assets/bg3.63c787ed.jpg" alt="">
             <!-- Content -->
@@ -125,7 +124,7 @@
             </div>
           </div>
           <!-- Card -->
-          <div class="bg-white dark:bg-[#282A43] w-60 p-4 space-y-3 rounded-2xl">
+          <div class="bg-white dark:bg-[#282A43] p-4 space-y-3 rounded-2xl cursor-pointer">
             <!-- Content -->
             <div class="flex gap-1.5">
               <div class="flex-1 space-y-1.5">
@@ -166,9 +165,9 @@
           <i class="fa-solid fa-plus text-gray-400/95"></i>
         </div>
         <!-- Cards -->
-        <div class="flex-1 space-y-5 overflow-x-hidden overflow-y-auto pr-4">
+        <div id="doing-cards" class="flex-1 space-y-5 w-60 overflow-x-hidden overflow-y-auto pr-4">
           <!-- Card -->
-          <div class="bg-white dark:bg-[#282A43] w-60 p-4 space-y-3 rounded-2xl">
+          <div class="bg-white dark:bg-[#282A43] p-4 space-y-3 rounded-2xl cursor-pointer">
             <!-- Card img -->
             <img class="w-full h-24 object-cover rounded-2xl" src="/kanban/assets/bg2.5bc1b44c.jpg" alt="">
             <!-- Content -->
@@ -216,9 +215,9 @@
           <i class="fa-solid fa-plus text-gray-400/95"></i>
         </div>
         <!-- Cards -->
-        <div class="flex-1 space-y-5 overflow-x-hidden overflow-y-auto pr-4">
+        <div id="under-review-cards" class="flex-1 space-y-5 w-60 overflow-x-hidden overflow-y-auto pr-4">
           <!-- Card -->
-          <div class="bg-white dark:bg-[#282A43] w-60 p-4 space-y-3 rounded-2xl">
+          <div class="bg-white dark:bg-[#282A43] p-4 space-y-3 rounded-2xl cursor-pointer">
             <!-- Content -->
             <div class="flex gap-1.5">
               <div class="flex-1 space-y-1.5">
@@ -253,7 +252,7 @@
             </div>
           </div>
           <!-- Card -->
-          <div class="bg-white dark:bg-[#282A43] w-60 p-4 space-y-3 rounded-2xl">
+          <div class="bg-white dark:bg-[#282A43] p-4 space-y-3 rounded-2xl cursor-pointer">
             <!-- Card img -->
             <img class="w-full h-24 object-cover rounded-2xl" src="/kanban/assets/bg1.64f63ffc.jpeg" alt="">
             <!-- Content -->
@@ -297,9 +296,9 @@
         </div>
 
         <!-- Cards -->
-        <div class="flex-1 space-y-5 overflow-x-hidden overflow-y-auto pr-4">
+        <div id="done-cards" class="flex-1 space-y-5 w-60 overflow-x-hidden overflow-y-auto pr-4">
           <!-- Card -->
-          <div class="bg-white dark:bg-[#282A43] w-60 p-4 space-y-3 rounded-2xl">
+          <div class="bg-white dark:bg-[#282A43] p-4 space-y-3 rounded-2xl cursor-pointer">
             <!-- Content -->
             <div class="flex gap-1.5">
               <div class="flex-1 space-y-1.5">
@@ -331,7 +330,7 @@
             </div>
           </div>
           <!-- Card -->
-          <div class="bg-white dark:bg-[#282A43] w-60 p-4 space-y-3 rounded-2xl">
+          <div class="bg-white dark:bg-[#282A43] p-4 space-y-3 rounded-2xl cursor-pointer">
             <!-- Content -->
             <div class="flex gap-1.5">
               <div class="flex-1 space-y-1.5">
@@ -363,7 +362,7 @@
             </div>
           </div>
           <!-- Card -->
-          <div class="bg-white dark:bg-[#282A43] w-60 p-4 space-y-3 rounded-2xl">
+          <div class="bg-white dark:bg-[#282A43] p-4 space-y-3 rounded-2xl cursor-pointer">
             <!-- Content -->
             <div class="flex gap-1.5">
               <div class="flex-1 space-y-1.5">

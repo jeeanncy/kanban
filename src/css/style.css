@@ -54,3 +54,20 @@ body {
   transition: 0.3s;
   will-change: transform;
 }
+
+.grabbing * {
+  cursor: grabbing;
+}
+
+.sortable-ghost {
+  opacity: 0 !important;
+}
+
+.sortable-drag {
+  opacity: 1 !important;
+  transform: rotate(-10deg);
+}
+
+.drag-card {
+  transition: all;
+}

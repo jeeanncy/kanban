@@ -13,30 +13,34 @@
 </head>
 
 <body
-  class="bg-[#EEF2F5] dark:bg-[#191B2B] dark:text-white flex gap-3 h-screen w-screen px-5 pt-6 pb-2 justify-center ">
+  class="bg-[#EEF2F5] dark:bg-[#191B2B] dark:text-white flex gap-6 h-screen w-screen px-5 pt-6 pb-2 justify-center ">
   <!-- Left Bar -->
-  <div class="overflow-y-auto h min-w-fit pr-5 mb-4">
-    <div class="bg-white dark:bg-[#282A43] min-h-full py-6 px-5 rounded-[2.4rem] flex flex-col items-center gap-9 ">
+  <div class="overflow-y-auto min-w-fit pr-1.5 mb-4">
+    <div class="bg-white dark:bg-[#282A43] min-h-full py-6 px-5 rounded-[2.4rem] flex flex-col items-center gap-9">
       <div
-        class="w-12 h-12 flex items-center flex-shrink-0 justify-center bg-sky-500 dark:bg-purple-500 text-white rounded-full text-xl">
-        <span>K</span>
+        class="w-12 h-12 bg-[#1CAEFF] dark:bg-purple-300 text-white dark:text-black rounded-full text-xl hover-scale-item relative">
+        <div
+          class="absolute h-[1.65rem] w-[1.65rem] top-1/2 -translate-y-1/2 right-[0.9px] rounded-full bg-[#00589F] dark:bg-purple-900">
+        </div>
+        <div class="absolute h-4 w-4 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 rounded-full bg-white">
+        </div>
       </div>
-      <div class=" mt-6 flex-1 flex flex-col items-center gap-12 text-lg ">
-        <div class="w-12 h-12 flex items-center justify-center bg-blue-900 text-white rounded-full">
+      <div class=" mt-6 flex-1 flex flex-col items-center gap-12 text-lg">
+        <div class="hover-scale-item w-12 h-12 flex items-center justify-center bg-blue-900 text-white rounded-full ">
           <i class="fa-solid fa-grip"></i>
         </div>
-        <i class="fa-solid fa-chart-column text-gray-400/95 "></i>
-        <i class=" fa-regular fa-envelope text-gray-400/95 "></i>
-        <i class="fa-solid fa-calendar-days text-gray-400/95 "></i>
-        <i class="fa-solid fa-gear text-gray-400/95 "></i>
+        <i class="fa-solid fa-chart-column hover-scale-item text-gray-400/95"></i>
+        <i class="fa-regular fa-envelope hover-scale-item text-gray-400/95"></i>
+        <i class="fa-solid fa-calendar-days hover-scale-item text-gray-400/95"></i>
+        <i class="fa-solid fa-gear hover-scale-item text-gray-400/95"></i>
       </div>
-      <div>
+      <div class="hover-scale-item">
         <input type="checkbox" id="checkbox" class="checkbox">
         <label for="checkbox" class="switch bg-gray-400/95 after:bg-white"></label>
       </div>
-      <img class="w-11 h-11 object-cover rounded-full" src="./src/img/user.png" alt="">
+      <img class="w-11 h-11 object-cover rounded-full hover-scale-item" src="./src/img/user.png" alt="">
 
-      <i class="fa-solid fa-arrow-right-from-bracket text-gray-400/95 text-lg "></i>
+      <i class="fa-solid fa-arrow-right-from-bracket hover-scale-item text-gray-400/95"></i>
     </div>
   </div>
   <!-- Content -->
@@ -46,26 +50,32 @@
     <!-- Bar -->
     <div class="flex flex-wrap gap-4 justify-between">
       <!-- Selector -->
-      <div class="font-bold bg-white dark:bg-[#282A43] py-3 px-5 rounded-full flex items-center gap-3">
+      <div
+        class="font-bold bg-white dark:bg-[#282A43] py-3 px-5 rounded-full flex items-center gap-3 hover-scale-item hover:scale-100">
         <span>Michilala Store</span>
         <i class="fa-solid fa-angle-down text-[10px]"></i>
       </div>
       <div class="flex flex-wrap gap-4">
         <!-- Search -->
-        <div class="bg-white dark:bg-[#282A43] py-3 px-5 rounded-full flex items-center gap-2 w-32 md:w-56	">
+        <div
+          class="bg-white dark:bg-[#282A43] py-3 px-5 rounded-full flex items-center gap-2 w-32 md:w-56 hover-scale-item hover:scale-100 cursor-default">
           <i class="fa-solid fa-magnifying-glass text-sm "></i>
           <input class="outline-none w-full bg-transparent" type="text" placeholder="Buscar">
         </div>
+
         <!-- Team -->
         <div class="flex flex-row -space-x-3">
-          <img class="w-11 h-11 object-cover border-2 border-[#EEF2F5] dark:border-[#191B2B] rounded-full"
+          <img
+            class="w-11 h-11 object-cover border-2 border-[#EEF2F5] dark:border-[#191B2B] rounded-full hover-scale-item"
             src="./src/img/user.png" alt="user">
-          <img class="w-11 h-11 object-cover border-2 border-[#EEF2F5] dark:border-[#191B2B] rounded-full"
+          <img
+            class="w-11 h-11 object-cover border-2 border-[#EEF2F5] dark:border-[#191B2B] rounded-full hover-scale-item"
             src="./src/img/user4.png" alt="user">
-          <img class="w-11 h-11 object-cover border-2 border-[#EEF2F5] dark:border-[#191B2B] rounded-full"
+          <img
+            class="w-11 h-11 object-cover border-2 border-[#EEF2F5] dark:border-[#191B2B] rounded-full hover-scale-item"
             src="./src/img/user3.png" alt="user">
           <div
-            class="w-11 h-11 border-2 border-[#EEF2F5] dark:border-[#191B2B] bg-blue-900 flex items-center justify-center text-white rounded-full text-xs font-semibold">
+            class="w-11 h-11 border-2 border-[#EEF2F5] dark:border-[#191B2B] bg-blue-900 flex items-center justify-center text-white rounded-full text-xs font-semibold hover-scale-item">
             +1
           </div>
         </div>
@@ -73,19 +83,19 @@
 
     </div>
     <!-- Sections -->
-    <div class="flex-1 flex flex-row gap-1 overflow-x-auto overflow-y-hidden pb-4">
+    <div class="flex-1 flex flex-row gap-3 overflow-x-auto overflow-y-hidden pb-1.5 xl:pb-0 mb-4">
       <!-- To do -->
       <div class="flex flex-col gap-4">
         <!-- Title -->
         <div class="flex items-center gap-3">
           <div class="bg-[#FF2373] w-4 h-4 rounded"></div>
           <span class="font-bold">Por hacer</span>
-          <i class="fa-solid fa-plus text-gray-400/95"></i>
+          <i class="fa-solid fa-plus text-gray-400/95 hover-scale-item"></i>
         </div>
         <!-- Cards -->
-        <div id="to-do-cards" class="flex-1 space-y-5 w-60 overflow-x-hidden overflow-y-auto pr-4">
+        <div id="to-do-cards" class="flex-1 space-y-5 w-60 overflow-x-hidden overflow-y-auto pr-1.5">
           <!-- Card -->
-          <div class="bg-white dark:bg-[#282A43] hover:opacity-70 p-4 space-y-3 rounded-2xl cursor-pointer drag-card">
+          <div class="card">
             <!-- Card img -->
             <img class="w-full h-24 object-cover rounded-2xl" src="./src/img/bg3.jpg" alt="">
             <!-- Content -->
@@ -122,7 +132,7 @@
             </div>
           </div>
           <!-- Card -->
-          <div class="bg-white dark:bg-[#282A43] p-4 space-y-3 rounded-2xl cursor-pointer">
+          <div class="card">
             <!-- Content -->
             <div class="flex gap-1.5">
               <div class="flex-1 space-y-1.5">
@@ -160,12 +170,12 @@
         <div class="flex items-center gap-3">
           <div class="bg-[#FFA943] w-4 h-4 rounded"></div>
           <span class="font-bold">En proceso</span>
-          <i class="fa-solid fa-plus text-gray-400/95"></i>
+          <i class="fa-solid fa-plus text-gray-400/95 hover-scale-item"></i>
         </div>
         <!-- Cards -->
-        <div id="doing-cards" class="flex-1 space-y-5 w-60 overflow-x-hidden overflow-y-auto pr-4">
+        <div id="doing-cards" class="flex-1 space-y-5 w-60 overflow-x-hidden overflow-y-auto pr-1.5">
           <!-- Card -->
-          <div class="bg-white dark:bg-[#282A43] p-4 space-y-3 rounded-2xl cursor-pointer">
+          <div class="card">
             <!-- Card img -->
             <img class="w-full h-24 object-cover rounded-2xl" src="./src/img/bg2.jpg" alt="">
             <!-- Content -->
@@ -210,12 +220,12 @@
         <div class="flex items-center gap-3">
           <div class="bg-[#1CAEFF] w-4 h-4 rounded"></div>
           <span class="font-bold">Bajo revisión</span>
-          <i class="fa-solid fa-plus text-gray-400/95"></i>
+          <i class="fa-solid fa-plus text-gray-400/95 hover-scale-item"></i>
         </div>
         <!-- Cards -->
-        <div id="under-review-cards" class="flex-1 space-y-5 w-60 overflow-x-hidden overflow-y-auto pr-4">
+        <div id="under-review-cards" class="flex-1 space-y-5 w-60 overflow-x-hidden overflow-y-auto pr-1.5">
           <!-- Card -->
-          <div class="bg-white dark:bg-[#282A43] p-4 space-y-3 rounded-2xl cursor-pointer">
+          <div class="card">
             <!-- Content -->
             <div class="flex gap-1.5">
               <div class="flex-1 space-y-1.5">
@@ -250,7 +260,7 @@
             </div>
           </div>
           <!-- Card -->
-          <div class="bg-white dark:bg-[#282A43] p-4 space-y-3 rounded-2xl cursor-pointer">
+          <div class="card">
             <!-- Card img -->
             <img class="w-full h-24 object-cover rounded-2xl" src="./src/img/bg1.jpeg" alt="">
             <!-- Content -->
@@ -290,13 +300,13 @@
         <div class="flex items-center gap-3">
           <div class="bg-[#40A736] w-4 h-4 rounded"></div>
           <span class="font-bold">Finalizado</span>
-          <i class="fa-solid fa-plus text-gray-400/95"></i>
+          <i class="fa-solid fa-plus text-gray-400/95 hover-scale-item"></i>
         </div>
 
         <!-- Cards -->
-        <div id="done-cards" class="flex-1 space-y-5 w-60 overflow-x-hidden overflow-y-auto pr-4">
+        <div id="done-cards" class="flex-1 space-y-5 w-60 overflow-x-hidden overflow-y-auto pr-1.5">
           <!-- Card -->
-          <div class="bg-white dark:bg-[#282A43] p-4 space-y-3 rounded-2xl cursor-pointer">
+          <div class="card">
             <!-- Content -->
             <div class="flex gap-1.5">
               <div class="flex-1 space-y-1.5">
@@ -328,7 +338,7 @@
             </div>
           </div>
           <!-- Card -->
-          <div class="bg-white dark:bg-[#282A43] p-4 space-y-3 rounded-2xl cursor-pointer">
+          <div class="card">
             <!-- Content -->
             <div class="flex gap-1.5">
               <div class="flex-1 space-y-1.5">
@@ -360,7 +370,7 @@
             </div>
           </div>
           <!-- Card -->
-          <div class="bg-white dark:bg-[#282A43] p-4 space-y-3 rounded-2xl cursor-pointer">
+          <div class="card">
             <!-- Content -->
             <div class="flex gap-1.5">
               <div class="flex-1 space-y-1.5">

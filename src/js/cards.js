@@ -16,6 +16,8 @@ const createSortable = (element) =>
   new Sortable(element, {
     animation: 300,
     group,
+    delay: 90,
+    delayOnTouchOnly: true,
     forceFallback: true,
     ghostClass: "sortable-ghost",
     dragClass: "sortable-drag",

@@ -57,7 +57,6 @@ body {
   width: 15px;
   transform: translateX(0);
   transition: 0.3s;
-
   will-change: transform;
 }
 
@@ -82,7 +81,7 @@ body {
 .sortable-drag {
   @apply shadow-xl;
   opacity: 1 !important;
-  transform: rotate(-10deg);
+  transform: rotate(-13deg);
 }
 
 /* ===== Scrollbar CSS ===== */

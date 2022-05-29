@@ -1,32 +1,40 @@
 import { DateTime } from "luxon";
 
+import bg1 from "../img/bg1.jpeg";
+import bg2 from "../img/bg2.jpg";
+import bg3 from "../img/bg3.jpg";
+import user1 from "../img/user1.png";
+import user2 from "../img/user2.png";
+import user3 from "../img/user3.png";
+import user4 from "../img/user4.png";
+
 const groups = [
   {
     name: "to-do",
     title: "Por hacer",
-    color: "#FF2373",
+    color_class: "bg-[#FF2373]",
     tasks: [
       {
         title: "Hacer un nuevo post",
         description:
           "Lorem ipsum dolor, sit amet consectetur elit. Quibusdam soluta quidem fugit aspernatur, tempora veniam molestias quas optio perspiciatis neque eius adipisci rem. Aliquam suscipit illum, eos ex ipsam quaerat.",
         date: DateTime.now().plus({ days: 2 }).toJSON(),
-        img_url: "./src/img/bg3.jpg",
+        img_url: bg3,
         participants: [
           {
             id: 4,
             name: "Carla",
-            img_url: "./src/img/user4.png",
+            img_url: user4,
           },
           {
             id: 3,
             name: "Tony",
-            img_url: "./src/img/user3.png",
+            img_url: user3,
           },
           {
             id: 2,
             name: "Diana",
-            img_url: "./src/img/user2.png",
+            img_url: user2,
           },
         ],
       },
@@ -39,12 +47,12 @@ const groups = [
           {
             id: 2,
             name: "Diana",
-            img_url: "./src/img/user2.png",
+            img_url: user2,
           },
           {
             id: 1,
             name: "Uriel",
-            img_url: "./src/img/user1.png",
+            img_url: user1,
           },
         ],
       },
@@ -53,29 +61,29 @@ const groups = [
   {
     name: "doing",
     title: "En proceso",
-    color: "#FFA943",
+    color_class: "bg-[#FFA943]",
     tasks: [
       {
         title: "Verificar materiales de diseño",
         description:
           "Lorem ipsum dolor, sit amet consectetur elit. Quibusdam soluta quidem fugit aspernatur, tempora veniam molestias quas optio perspiciatis neque eius adipisci rem. Aliquam suscipit illum, eos ex ipsam quaerat.",
         date: DateTime.now().plus({ month: 1 }).toJSON(),
-        img_url: "./src/img/bg2.jpg",
+        img_url: bg2,
         participants: [
           {
             id: 1,
             name: "Uriel",
-            img_url: "./src/img/user1.png",
+            img_url: user1,
           },
           {
             id: 4,
             name: "Carla",
-            img_url: "./src/img/user4.png",
+            img_url: user4,
           },
           {
             id: 2,
             name: "Diana",
-            img_url: "./src/img/user2.png",
+            img_url: user2,
           },
         ],
       },
@@ -84,7 +92,7 @@ const groups = [
   {
     name: "under-review",
     title: "Bajo revisión",
-    color: "#1CAEFF",
+    color_class: "bg-[#1CAEFF]",
     tasks: [
       {
         title: "Discutir presupuesto anual",
@@ -95,22 +103,22 @@ const groups = [
           {
             id: 3,
             name: "Tony",
-            img_url: "./src/img/user3.png",
+            img_url: user3,
           },
           {
             id: 2,
             name: "Diana",
-            img_url: "./src/img/user2.png",
+            img_url: user2,
           },
           {
             id: 1,
             name: "Uriel",
-            img_url: "./src/img/user1.png",
+            img_url: user1,
           },
           {
             id: 4,
             name: "Carla",
-            img_url: "./src/img/user4.png",
+            img_url: user4,
           },
         ],
       },
@@ -119,17 +127,17 @@ const groups = [
         description:
           "Lorem ipsum dolor, sit amet consectetur elit. Quibusdam soluta quidem fugit aspernatur, tempora veniam molestias quas optio perspiciatis neque eius adipisci rem. Aliquam suscipit illum, eos ex ipsam quaerat.",
         date: DateTime.now().plus({ days: 2 }).toJSON(),
-        img_url: "./src/img/bg1.jpeg",
+        img_url: bg1,
         participants: [
           {
             id: 4,
             name: "Carla",
-            img_url: "./src/img/user4.png",
+            img_url: user4,
           },
           {
             id: 1,
             name: "Uriel",
-            img_url: "./src/img/user1.png",
+            img_url: user1,
           },
         ],
       },
@@ -138,7 +146,7 @@ const groups = [
   {
     name: "done",
     title: "Finalizado",
-    color: "#40A736",
+    color_class: "bg-[#40A736]",
     tasks: [
       {
         title: "Programar reunión semanal",
@@ -149,12 +157,12 @@ const groups = [
           {
             id: 2,
             name: "Diana",
-            img_url: "./src/img/user2.png",
+            img_url: user2,
           },
           {
             id: 1,
             name: "Uriel",
-            img_url: "./src/img/user1.png",
+            img_url: user1,
           },
         ],
       },
@@ -167,12 +175,12 @@ const groups = [
           {
             id: 3,
             name: "Tony",
-            img_url: "./src/img/user3.png",
+            img_url: user3,
           },
           {
             id: 4,
             name: "Carla",
-            img_url: "./src/img/user4.png",
+            img_url: user4,
           },
         ],
       },
@@ -185,28 +193,29 @@ const groups = [
           {
             id: 1,
             name: "Uriel",
-            img_url: "./src/img/user1.png",
+            img_url: user1,
           },
           {
             id: 3,
             name: "Tony",
-            img_url: "./src/img/user3.png",
+            img_url: user3,
           },
           {
             id: 2,
             name: "Diana",
-            img_url: "./src/img/user2.png",
+            img_url: user2,
           },
-
           {
             id: 4,
             name: "Carla",
-            img_url: "./src/img/user4.png",
+            img_url: user4,
           },
         ],
       },
     ],
   },
 ];
+
+console.log(groups);
 
 export default groups;

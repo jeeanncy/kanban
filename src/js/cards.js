@@ -53,14 +53,15 @@ const boardContent = document.getElementById("board-content");
 //   )
 // );
 
-groups.forEach(({ name, title, color, tasks }) => {
+groups.forEach(({ name, title, color_class, tasks }) => {
   const contenedor = document.createElement("div");
   contenedor.className = "flex flex-col gap-4";
 
   contenedor.innerHTML = `
   <div class="flex items-center gap-3">
-  <div class="bg-[${color}] w-4 h-4 rounded"></div>
-  <span class="font-bold">${title}</span>
+
+    <div class="${color_class} w-4 h-4 rounded"></div>
+    <span class="font-bold">${title}</span>
   <i class="fa-solid fa-plus text-gray-400/95 hover-scale-item"></i>
   </div>
   `;

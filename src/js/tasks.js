@@ -101,8 +101,10 @@ const generateGroups = (groups) => {
     groupTasks.className =
       "flex-1 space-y-5 w-60 overflow-x-hidden overflow-y-auto pr-1.5";
 
-    tasks.forEach(({ id, title, description, date, img_url, participants }) => {
-      groupTasks.innerHTML += `
+    if (tasks !== null) {
+      tasks.forEach(
+        ({ id, title, description, date, img_url, participants }) => {
+          groupTasks.innerHTML += `
       <!-- Card -->
             <div id=${id} class="card">
             <!-- Card img -->
@@ -154,7 +156,9 @@ const generateGroups = (groups) => {
               </div>
             </div>
       `;
-    });
+        }
+      );
+    }
 
     createSortable(
       groupTasks,
@@ -171,14 +175,20 @@ const generateGroups = (groups) => {
 verifyData();
 
 search.addEventListener("keyup", (e) => {
+  let groups = JSON.parse(localStorage.getItem("groups"));
+
   const searchValue = e.target.value.trim();
   if (searchValue !== "") {
-    const filteredGroups = groups.map((element) => ({
-      ...element,
-      tasks: element.tasks.filter(({ title }) =>
-        title.toLowerCase().includes(searchValue.toLowerCase())
-      ),
-    }));
+    const filteredGroups = {};
+
+    Object.keys(groups).forEach((key) => {
+      filteredGroups[key] = {
+        ...groups[key],
+        tasks: groups[key].tasks.filter(({ title }) =>
+          title.toLowerCase().includes(searchValue.toLowerCase())
+        ),
+      };
+    });
     generateGroups(filteredGroups);
   } else {
     generateGroups(groups);

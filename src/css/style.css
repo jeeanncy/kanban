@@ -103,7 +103,7 @@ body {
 
 @layer components {
   .hover-scale-item {
-    @apply hover:scale-110 hover:-translate-y-1 hover:shadow-xl cursor-pointer;
+    @apply hover:scale-110 hover:-translate-y-1 hover:shadow-xl;
     transition-property: transform, box-shadow;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 500ms;

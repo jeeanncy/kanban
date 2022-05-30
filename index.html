@@ -10,8 +10,8 @@
     rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kanban</title>
-  <script type="module" crossorigin src="/kanban/assets/index.6cc033c0.js"></script>
-  <link rel="stylesheet" href="/kanban/assets/index.e4624f39.css">
+  <script type="module" crossorigin src="/kanban/assets/index.867152ed.js"></script>
+  <link rel="stylesheet" href="/kanban/assets/index.823f5ff7.css">
 </head>
 
 <body
@@ -28,21 +28,21 @@
         </div>
       </div>
       <div class=" mt-6 flex-1 flex flex-col items-center gap-12 text-lg">
-        <div class="hover-scale-item w-12 h-12 flex items-center justify-center bg-blue-900 text-white rounded-full ">
+        <div
+          class="hover-scale-item w-12 h-12 flex items-center justify-center bg-blue-900 text-white rounded-full cursor-pointer">
           <i class="fa-solid fa-grip"></i>
         </div>
-        <i class="fa-solid fa-chart-column hover-scale-item text-gray-400/95"></i>
-        <i class="fa-regular fa-envelope hover-scale-item text-gray-400/95"></i>
-        <i class="fa-solid fa-calendar-days hover-scale-item text-gray-400/95"></i>
-        <i class="fa-solid fa-gear hover-scale-item text-gray-400/95"></i>
+        <i class="fa-solid fa-chart-column hover-scale-item cursor-not-allowed text-gray-400/95"></i>
+        <i class="fa-regular fa-envelope hover-scale-item cursor-not-allowed text-gray-400/95"></i>
+        <i class="fa-solid fa-calendar-days hover-scale-item cursor-not-allowed text-gray-400/95"></i>
+        <i class="fa-solid fa-gear hover-scale-item cursor-not-allowed text-gray-400/95"></i>
       </div>
       <div class="hover-scale-item">
         <input type="checkbox" id="checkbox" class="checkbox">
         <label for="checkbox" class="switch bg-gray-400/95 after:bg-white"></label>
       </div>
       <img class="w-11 h-11 object-cover rounded-full hover-scale-item" src="/kanban/assets/user1.a60aae5a.png" alt="">
-
-      <i class="fa-solid fa-arrow-right-from-bracket hover-scale-item text-gray-400/95"></i>
+      <i class="fa-solid fa-arrow-right-from-bracket hover-scale-item cursor-not-allowed text-gray-400/95"></i>
     </div>
   </div>
   <!-- Boards -->
@@ -53,7 +53,7 @@
     <div class="flex flex-wrap gap-4 justify-between">
       <!-- Selector -->
       <div
-        class="font-bold bg-white dark:bg-[#282A43] py-3 px-5 rounded-full flex items-center gap-3 hover-scale-item hover:scale-100">
+        class="font-bold bg-white dark:bg-[#282A43] py-3 px-5 rounded-full flex items-center gap-3 hover-scale-item hover:scale-100 cursor-not-allowed">
         <span>Michilala Store</span>
         <i class="fa-solid fa-angle-down text-[10px]"></i>
       </div>

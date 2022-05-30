@@ -1,3 +1,3 @@
 import "../css/style.css";
 import "./dark-mode";
-import "./cards";
+import "./tasks";

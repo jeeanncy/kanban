@@ -8,6 +8,7 @@ import defaultGroups from "../assets/default-data";
 
 const boardContent = document.getElementById("board-content");
 const search = document.getElementById("search");
+const logo = document.getElementById("logo");
 
 const setDragCursor = (value) => {
   const html = document.getElementsByTagName("html").item(0);
@@ -48,6 +49,11 @@ const buscar = (searchValue) => {
   } else {
     generateGroups(groups);
   }
+};
+
+const resetear = () => {
+  localStorage.setItem("groups", JSON.stringify(defaultGroups));
+  generateGroups(defaultGroups);
 };
 
 const createSortable = (element, groupName, groups) =>
@@ -217,9 +223,11 @@ const generateGroups = (groups) => {
         theme: "my-theme",
         allowHTML: true,
         onCreate(instance) {
-          instance.popper.querySelector(`#${id}-delete`).onclick = () => {
-            eliminar(id);
-          };
+          instance.popper
+            .querySelector(`#${id}-delete`)
+            .addEventListener("click", () => {
+              eliminar(id);
+            });
         },
       });
     });
@@ -228,6 +236,16 @@ const generateGroups = (groups) => {
 
 search.addEventListener("keyup", (e) => {
   buscar(e.target.value);
+});
+
+tippy(logo, {
+  content: "Resetear",
+  placement: "bottom",
+  theme: "my-theme",
+});
+
+logo.addEventListener("click", () => {
+  resetear();
 });
 
 const verifyData = () => {

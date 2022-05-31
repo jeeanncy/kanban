@@ -101,6 +101,20 @@ body {
   background-clip: content-box;
 }
 
+.tippy-box[data-theme~="my-theme"] {
+  @apply dark:bg-white bg-[#282A43] dark:text-black shadow-xl;
+}
+
+.tippy-box[data-theme~="my-theme"][data-placement^="bottom"]
+  > .tippy-arrow::before {
+  @apply dark:border-b-white border-b-[#282A43];
+}
+
+.tippy-box[data-theme~="my-theme"][data-placement^="top"]
+  > .tippy-arrow::before {
+  @apply dark:border-t-white border-t-[#282A43];
+}
+
 @layer components {
   .hover-scale-item {
     @apply hover:scale-110 hover:-translate-y-1 hover:shadow-xl;
@@ -113,7 +127,7 @@ body {
     @apply bg-white dark:bg-[#282A43] transition-shadow duration-500 hover:shadow-xl p-4 space-y-3 rounded-2xl cursor-pointer;
   }
 
-  .card * {
+  .card img {
     @apply select-none pointer-events-none;
   }
 }

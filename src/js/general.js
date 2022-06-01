@@ -6,6 +6,8 @@ import "tippy.js/animations/scale.css";
 
 import defaultBoard from "./default-data";
 
+const boardSelection = document.getElementById("board-selection");
+const boardMenbers = document.getElementById("board-menbers");
 const boardContent = document.getElementById("board-content");
 const search = document.getElementById("search");
 const logo = document.getElementById("logo");
@@ -83,7 +85,28 @@ const createSortable = (element, groupName, groupsNames) =>
     },
   });
 
-const loadGroupsAndTasks = ({ groups }) => {
+const loadBoardHeader = (title, menbers) => {
+  boardSelection.textContent = title;
+
+  let headerMenbers = menbers.slice(0, 3).map(
+    ({ imgUrl }) => `
+    <img class="w-11 h-11 object-cover border-2 border-[#EEF2F5] dark:border-[#191B2B] rounded-full hover-scale-item" src=${imgUrl} alt="user">
+  `
+  );
+
+  headerMenbers = [
+    ...headerMenbers,
+    menbers.slice(3).length > 0
+      ? `<div class="w-11 h-11 border-2 border-[#EEF2F5] dark:border-[#191B2B] bg-blue-900 flex items-center justify-center text-white rounded-full text-xs font-semibold hover-scale-item">
++${menbers.slice(3).length}
+</div>`
+      : "",
+  ];
+
+  boardMenbers.innerHTML = headerMenbers.join("");
+};
+
+const loadBoardContent = (groups) => {
   const content = groups.map(
     ({ id: groupId, title: groupTitle, color, tasks }) => `
     <div class="flex flex-col gap-4">
@@ -170,12 +193,12 @@ const loadGroupsAndTasks = ({ groups }) => {
   boardContent.innerHTML = content.join("");
 };
 
-const setSortablesAndOptions = (board) => {
-  board.groups.forEach(({ id: groupId, tasks }) => {
+const setSortablesAndOptions = (groups) => {
+  groups.forEach(({ id: groupId, tasks }) => {
     createSortable(
       document.getElementById(groupId),
       groupId,
-      board.groups.map(({ id }) => id).filter((item) => item !== groupId)
+      groups.map(({ id }) => id).filter((item) => item !== groupId)
     );
 
     tasks.forEach(({ id }) => {
@@ -204,9 +227,10 @@ const setSortablesAndOptions = (board) => {
   });
 };
 
-const loadBoard = (board = getLocalBoard()) => {
-  loadGroupsAndTasks(board);
-  setSortablesAndOptions(board);
+const loadBoard = ({ title, menbers, groups } = getLocalBoard()) => {
+  loadBoardHeader(title, menbers);
+  loadBoardContent(groups);
+  setSortablesAndOptions(groups);
 };
 
 // eslint-disable-next-line no-unused-vars

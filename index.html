@@ -45,42 +45,32 @@
   </div>
   <!-- Boards -->
   <div class="pt-7 md:pr-5 gap-5 flex flex-col overflow-hidden">
-    <!-- Title -->
-    <h1 class="text-3xl font-bold">Tableros</h1>
-    <!-- Bar -->
-    <div class="flex flex-wrap gap-4 justify-between">
-      <!-- Selector -->
-      <div
-        class="font-bold bg-white dark:bg-[#282A43] py-3 px-5 rounded-full flex items-center gap-3 hover-scale-item hover:scale-100 cursor-not-allowed">
-        <span>Michilala Store</span>
-        <i class="fa-solid fa-angle-down text-[10px]"></i>
-      </div>
-      <div class="flex flex-wrap gap-4">
-        <!-- Search -->
+    <!-- Header -->
+    <div class="space-y-5">
+      <!-- Title -->
+      <h1 class="text-3xl font-bold">Tableros</h1>
+      <!-- Bar -->
+      <div class="flex flex-wrap gap-4 justify-between">
+        <!-- Selector -->
         <div
-          class="bg-white dark:bg-[#282A43] py-3 px-5 rounded-full flex items-center gap-2 w-32 md:w-56 hover-scale-item hover:scale-100 cursor-default">
-          <i class="fa-solid fa-magnifying-glass text-sm "></i>
-          <input id="search" class="outline-none w-full bg-transparent" type="text" placeholder="Buscar">
+          class="font-bold bg-white dark:bg-[#282A43] py-3 px-5 rounded-full flex items-center gap-3 hover-scale-item hover:scale-100 cursor-not-allowed">
+          <span id="board-selection">cargando ...</span>
+          <i class="fa-solid fa-angle-down text-[10px]"></i>
         </div>
-
-        <!-- Team -->
-        <div class="flex flex-row -space-x-3">
-          <img
-            class="w-11 h-11 object-cover border-2 border-[#EEF2F5] dark:border-[#191B2B] rounded-full hover-scale-item"
-            src="./src/img/user1.png" alt="user">
-          <img
-            class="w-11 h-11 object-cover border-2 border-[#EEF2F5] dark:border-[#191B2B] rounded-full hover-scale-item"
-            src="./src/img/user4.png" alt="user">
-          <img
-            class="w-11 h-11 object-cover border-2 border-[#EEF2F5] dark:border-[#191B2B] rounded-full hover-scale-item"
-            src="./src/img/user3.png" alt="user">
+        <div class="flex flex-wrap gap-4">
+          <!-- Search -->
           <div
-            class="w-11 h-11 border-2 border-[#EEF2F5] dark:border-[#191B2B] bg-blue-900 flex items-center justify-center text-white rounded-full text-xs font-semibold hover-scale-item">
-            +1
+            class="bg-white dark:bg-[#282A43] py-3 px-5 rounded-full flex items-center gap-2 w-32 md:w-56 hover-scale-item hover:scale-100 cursor-default">
+            <i class="fa-solid fa-magnifying-glass text-sm "></i>
+            <input id="search" class="outline-none w-full bg-transparent" type="text" placeholder="Buscar">
+          </div>
+
+          <!-- Menbers -->
+          <div id="board-menbers" class="flex flex-row -space-x-3">
           </div>
         </div>
-      </div>
 
+      </div>
     </div>
     <!-- Content -->
     <div id="board-content" class="flex-1 flex flex-row gap-3 overflow-x-auto overflow-y-hidden pb-1.5 xl:pb-0 mb-4">

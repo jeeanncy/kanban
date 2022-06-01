@@ -1,8 +1,8 @@
 import { DateTime } from "luxon";
-import Menber from "../js/models/Menber";
-import Task from "../js/models/Task";
-import Group from "../js/models/Group";
-import Board from "../js/models/Board";
+import Menber from "./models/Menber";
+import Task from "./models/Task";
+import Group from "./models/Group";
+import Board from "./models/Board";
 
 import bg1 from "../img/bg1.jpeg";
 import bg2 from "../img/bg2.jpg";

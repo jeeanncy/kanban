@@ -8,7 +8,7 @@ const setDarkMode = (value) => {
   localStorage.setItem("preferences", JSON.stringify(preferences));
 };
 
-//Establecer segun las preferencias del sistema por default
+// Establecer segun las preferencias del sistema por default
 const preferences = JSON.parse(localStorage.getItem("preferences"));
 const isSystemDark = window.matchMedia("(prefers-color-scheme: dark)");
 

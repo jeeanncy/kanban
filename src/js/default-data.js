@@ -34,7 +34,7 @@ const task2 = new Task(
   DateTime.now().plus({ month: 1 }),
   menbers.filter(({ id }) => [1, 3].includes(id))
 );
-const group1 = new Group("to-do", "Por hacer", "#FF2373", [task1, task2]);
+const group1 = new Group("to-do", "Por hacer", "bg-[#FF2373]", [task1, task2]);
 
 const task3 = new Task(
   "task3",
@@ -44,7 +44,7 @@ const task3 = new Task(
   menbers.filter(({ id }) => [2, 3, 4].includes(id)),
   bg2
 );
-const group2 = new Group("doing", "En proceso", "#FFA943", [task3]);
+const group2 = new Group("doing", "En proceso", "bg-[#FFA943]", [task3]);
 
 const task4 = new Task(
   "task4",
@@ -61,7 +61,7 @@ const task5 = new Task(
   menbers.filter(({ id }) => [1, 4].includes(id)),
   bg1
 );
-const group3 = new Group("under_review", "Bajo revisión", "#1CAEFF", [
+const group3 = new Group("under-review", "Bajo revisión", "bg-[#1CAEFF]", [
   task4,
   task5,
 ]);
@@ -87,7 +87,7 @@ const task8 = new Task(
   DateTime.now().minus({ month: 1 }),
   menbers
 );
-const group4 = new Group("done", "Finalizado", "#40A736", [
+const group4 = new Group("done", "Finalizado", "bg-[#40A736]", [
   task6,
   task7,
   task8,

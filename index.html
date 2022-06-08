@@ -80,7 +80,7 @@
   <div id="overlay"
     class="fixed opacity-0 invisible flex inset-0 justify-center items-center bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full backdrop-blur-sm transition-all duration-500">
     <div class="p-7 flex flex-col items-center gap-6 w-96 shadow-lg rounded-xl bg-white dark:bg-[#282A43]">
-      <h3 class="text-xl leading-6 font-bold text-gray-900 dark:text-white">Agregar Tarea</h3>
+      <h3 id="modal-title" class="text-xl leading-6 font-bold text-gray-900 dark:text-white">Cargando ...</h3>
       <form id="modal-form" class="w-full space-y-4">
         <label class="block">
           <span class="text-gray-400/95 font-semibold">Titulo</span>
@@ -91,44 +91,43 @@
               rounded-2xl
               w-full
               text-sm
-              text-white
-              bg-black/20
+              dark:text-white
+              bg-gray-500/20
               outline-none
             " placeholder="Ingrese el titulo de la tarea" />
         </label>
         <label class="block">
           <span class="text-gray-400/95 font-semibold">Fecha limite</span>
-          <input name="date" required type="text" max="9999-12-31" class="
+          <input name="date" required type="date" class="
               mt-2
               block
               p-3
               rounded-2xl
               w-full
               text-sm
-              text-white
-              bg-black/20
+              dark:text-white
+              bg-gray-500/20
               outline-none
               dark:[color-scheme:dark]
-            " onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}"
-            placeholder="Ingrese la fecha limite" />
+            " />
         </label>
         <label class="block">
           <span class="text-gray-400/95 font-semibold">Detalles</span>
-          <textarea name="description" class="
+          <textarea name="details" class="
               mt-2
               block
               p-3
               rounded-2xl
               w-full
-              text-sm
               resize-none
-              text-white
-              bg-black/20
+              text-sm
+              dark:text-white
+              bg-gray-500/20
               outline-none
             " rows="3" placeholder="Ingrese los detalles de la tarea"></textarea>
         </label>
         <div class="text-center">
-          <button id="ok-btn" type="submit"
+          <button type="submit"
             class=" bg-[#1CAEFF] dark:bg-purple-500 hover:bg-opacity-50 dark:hover:bg-opacity-50 text-white text-base font-bold rounded-3xl shadow-md focus:outline-none py-2.5 px-5 transition duration-500">
             Aceptar
           </button>

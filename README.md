@@ -1,5 +1,5 @@
 # kanban
-Demo: https://jeanccana.github.io/kanban/
+Demo: https://jeeanncy.github.io/kanban/
 ## Comandos disponibles
 En el directorio del proyecto, puede correr:
 ### `npm run dev`
